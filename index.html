@@ -156,7 +156,11 @@
     </div>
     <script type="text/javascript">
       if (navigator && navigator.serviceWorker) {
-        navigator.serviceWorker.register('sw.js');
+        navigator.serviceWorker.register('/sw.js');
+      }
+
+      if (location.pathname.length > 1) {
+        location.href = 'https://app.coracle.social' + location.pathname
       }
     </script>
   </body>
